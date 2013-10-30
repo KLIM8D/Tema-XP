@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://KLIM8D.github.io/Tema-XP/sitemap.xml 
