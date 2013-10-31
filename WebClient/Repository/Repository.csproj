@@ -51,6 +51,7 @@
     <Compile Include="Models\Artwork.cs" />
     <Compile Include="Models\Auction.cs" />
     <Compile Include="Models\Bid.cs" />
+    <Compile Include="Models\BPDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Mapping\ArtistMap.cs" />
     <Compile Include="Models\Mapping\ArtworkMap.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\ArtistRepository.cs" />
     <Compile Include="Resources\ArtworkRepository.cs" />
+    <Compile Include="Resources\AuctionRepository.cs" />
     <Compile Include="Resources\CategoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
