@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace WebClient.Repository.Models
+namespace Repository.Models
 {
     [DataContract(IsReference = false)]
     public partial class Artwork

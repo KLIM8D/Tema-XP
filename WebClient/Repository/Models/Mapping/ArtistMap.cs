@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 
-namespace WebClient.Repository.Models.Mapping
+namespace Repository.Models.Mapping
 {
     public class ArtistMap : EntityTypeConfiguration<Artist>
     {
