@@ -11,13 +11,13 @@ namespace Repository.Models
         [DataMember]
         public string Title { get; set; }
         [DataMember]
+        public DateTime Date { get; set; }
+        [DataMember]
         public string Description { get; set; }
         [DataMember]
-        public decimal SizeHight { get; set; }
+        public decimal SizeHeight { get; set; }
         [DataMember]
         public decimal SizeWidth { get; set; }
-        [DataMember]
-        public DateTime Date { get; set; }
         [DataMember]
         public decimal Price { get; set; }
     }

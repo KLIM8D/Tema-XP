@@ -1,11 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace Repository.Models.Mapping
 {
-    public class ArtworkMap
+    public class ArtworkMap : EntityTypeConfiguration<Artwork>
     {
+        public ArtworkMap()
+        {
+            this.HasKey(t => t.Id);
+
+            this.ToTable("Artworks");
+            this.Property(t => t.Id).HasColumnName("Id");
+            this.Property(t => t.Title).HasColumnName("Title");
+            this.Property(t => t.Date).HasColumnName("Date");
+            this.Property(t => t.Description).HasColumnName("Description");
+            this.Property(t => t.SizeHeight).HasColumnName("SizeHeight");
+            this.Property(t => t.SizeWidth).HasColumnName("SizeWidth");
+            this.Property(t => t.Price).HasColumnName("Price");
+        }
     }
 }
