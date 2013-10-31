@@ -11,6 +11,7 @@ namespace Repository.Models.Mapping
             this.ToTable("Categories");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Title).HasColumnName("Title");
+            this.Property(t => t.Active).HasColumnName("Active");
         }
     }
 }

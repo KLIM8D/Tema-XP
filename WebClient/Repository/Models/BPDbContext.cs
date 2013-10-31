@@ -10,7 +10,7 @@ namespace Repository.Models
             Database.SetInitializer<BPDbContext>(null);
         }
 
-        public BPDbContext() : base("Name=BPDbContext")
+        public BPDbContext()
         {
             Configuration.ProxyCreationEnabled = false;
         }

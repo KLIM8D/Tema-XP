@@ -14,6 +14,7 @@ namespace Repository.Models
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string SurName { get; set; }
-        public virtual List<Artwork> Artworks { get; set; } 
+        public virtual List<Artwork> Artworks { get; set; }
+        public bool Active { get; set; }
     }
 }
