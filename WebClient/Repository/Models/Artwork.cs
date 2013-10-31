@@ -6,19 +6,16 @@ namespace Repository.Models
     [DataContract(IsReference = false)]
     public partial class Artwork
     {
-        [DataMember]
         public int Id { get; set; }
-        [DataMember]
+        public int ArtistId { get; set; }
+        public int CategoryId { get; set; }
         public string Title { get; set; }
-        [DataMember]
         public DateTime Date { get; set; }
-        [DataMember]
         public string Description { get; set; }
-        [DataMember]
         public decimal SizeHeight { get; set; }
-        [DataMember]
         public decimal SizeWidth { get; set; }
-        [DataMember]
         public decimal Price { get; set; }
+        public virtual Artist Artist { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
