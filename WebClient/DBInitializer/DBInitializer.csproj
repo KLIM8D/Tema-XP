@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62480081-6ABA-4C39-9889-CA6420500F92}</ProjectGuid>
+    <ProjectGuid>{1E54718D-A243-4D63-8BEE-77408DB16AFE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DBInitializer</RootNamespace>
@@ -35,7 +35,11 @@
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,10 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{58f0efb7-5864-4580-849d-687ada3ad1de}</Project>
+      <Project>{8e02d9be-e934-48ca-9313-e18a37f5e399}</Project>
       <Name>Repository</Name>
     </ProjectReference>
   </ItemGroup>

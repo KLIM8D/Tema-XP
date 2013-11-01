@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 namespace Repository.Models
 {
-    [DataContract(IsReference = false)]
     public partial class Category
     {
         public Category()

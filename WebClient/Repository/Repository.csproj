@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{58F0EFB7-5864-4580-849D-687ADA3AD1DE}</ProjectGuid>
+    <ProjectGuid>{8E02D9BE-E934-48CA-9313-E18A37F5E399}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Repository</RootNamespace>
@@ -39,7 +39,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,24 +48,19 @@
   <ItemGroup>
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Artwork.cs" />
-    <Compile Include="Models\Auction.cs" />
-    <Compile Include="Models\Bid.cs" />
     <Compile Include="Models\BPDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Mapping\ArtistMap.cs" />
     <Compile Include="Models\Mapping\ArtworkMap.cs" />
-    <Compile Include="Models\Mapping\AuctionMap.cs" />
     <Compile Include="Models\Mapping\CategoryMap.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\ArtistRepository.cs" />
-    <Compile Include="Resources\ArtworkRepository.cs" />
-    <Compile Include="Resources\AuctionRepository.cs" />
-    <Compile Include="Resources\CategoryRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
