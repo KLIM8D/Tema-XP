@@ -15,7 +15,7 @@ namespace WebClient.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Gallery()
         {
             ViewBag.Message = "Your app description page.";
 
