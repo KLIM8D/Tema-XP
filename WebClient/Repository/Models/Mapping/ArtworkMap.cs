@@ -18,6 +18,7 @@ namespace Repository.Models.Mapping
             this.Property(t => t.SizeHeight).HasColumnName("SizeHeight");
             this.Property(t => t.SizeWidth).HasColumnName("SizeWidth");
             this.Property(t => t.Price).HasColumnName("Price");
+            this.Property(t => t.ImgFileName).HasColumnName("ImgFileName");
             this.Property(t => t.Active).HasColumnName("Active");
 
             this.HasRequired(t => t.Artist).WithMany(t => t.Artworks).HasForeignKey(d => d.ArtistId);

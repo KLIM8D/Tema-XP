@@ -7,7 +7,8 @@ namespace Repository.Models
     {
         static BPDbContext()
         {
-            Database.SetInitializer<BPDbContext>(null);
+            /*Database.SetInitializer<BPDbContext>(null);*/
+            Database.SetInitializer<BPDbContext>(new DropCreateDatabaseIfModelChanges<BPDbContext>());
         }
 
         public BPDbContext()
@@ -26,6 +27,8 @@ namespace Repository.Models
             modelBuilder.Configurations.Add(new CategoryMap());
             modelBuilder.Configurations.Add(new ArtworkMap());
             modelBuilder.Configurations.Add(new UserMap());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

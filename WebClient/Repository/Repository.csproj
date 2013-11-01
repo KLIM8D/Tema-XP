@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Artwork.cs" />
+    <Compile Include="Models\Auction.cs" />
     <Compile Include="Models\BPDbContext.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Mapping\ArtistMap.cs" />

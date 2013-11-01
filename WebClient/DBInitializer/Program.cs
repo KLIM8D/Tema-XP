@@ -1,4 +1,6 @@
-﻿using Repository.Models;
+﻿using System;
+using System.Data.Entity;
+using Repository.Models;
 
 namespace DBInitializer
 {
@@ -8,8 +10,9 @@ namespace DBInitializer
         {
             using (var context = new BPDbContext())
             {
-                /* context.Database.Create(); */
                 context.Database.Initialize(force: true);
+                Console.WriteLine("Database initializer done! Press any key to continue...");
+                Console.ReadKey();
             }
         }
     }
