@@ -53,6 +53,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Mapping\ArtistMap.cs" />
     <Compile Include="Models\Mapping\ArtworkMap.cs" />
+    <Compile Include="Models\Mapping\AuctionMap.cs" />
     <Compile Include="Models\Mapping\CategoryMap.cs" />
     <Compile Include="Models\Mapping\UserMap.cs" />
     <Compile Include="Models\User.cs" />
