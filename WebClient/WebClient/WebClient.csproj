@@ -165,9 +165,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\txp_db.mdf" />
-    <Content Include="App_Data\txp_db_log.ldf">
-      <DependentUpon>txp_db.mdf</DependentUpon>
+    <Content Include="App_Data\db_txp.mdf" />
+    <Content Include="App_Data\db_txp_log.ldf">
+      <DependentUpon>db_txp.mdf</DependentUpon>
     </Content>
     <Content Include="Content\css\bootstrap-theme.css" />
     <Content Include="Content\css\bootstrap-theme.min.css" />

@@ -6,8 +6,11 @@ namespace DBInitializer
     {
         static void Main(string[] args)
         {
-            var db = new BPDbContext();
-            db.Database.Create();
+            using (var context = new BPDbContext())
+            {
+                /* context.Database.Create(); */
+                context.Database.Initialize(force: true);
+            }
         }
     }
 }

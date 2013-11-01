@@ -13,8 +13,8 @@ namespace Repository.Models
         public decimal SizeHeight { get; set; }
         public decimal SizeWidth { get; set; }
         public decimal Price { get; set; }
+        public bool Active { get; set; }
         public virtual Artist Artist { get; set; }
         public virtual Category Category { get; set; }
-        public bool Active { get; set; }
     }
 }
