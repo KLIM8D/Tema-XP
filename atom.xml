@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Tema-XP]]></title>
   <link href="http://KLIM8D.github.io/Tema-XP/atom.xml" rel="self"/>
   <link href="http://KLIM8D.github.io/Tema-XP/"/>
-  <updated>2013-10-30T10:05:11+01:00</updated>
+  <updated>2013-11-01T09:24:59+01:00</updated>
   <id>http://KLIM8D.github.io/Tema-XP/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Mads, Chris & Morten]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mareridt ved højlys dag]]></title>
+    <link href="http://KLIM8D.github.io/Tema-XP/blog/2013/10/31/mareridt-ved-hojlys-dag/"/>
+    <updated>2013-10-31T13:00:00+01:00</updated>
+    <id>http://KLIM8D.github.io/Tema-XP/blog/2013/10/31/mareridt-ved-hojlys-dag</id>
+    <content type="html"><![CDATA[<p><img src="http://KLIM8D.github.io/Tema-XP/images/IMG_00000036.jpg" title="burndown" >
+Dagen startede&hellip; der var regnvejr og på alle måder indikerede det til at blive en af de slags dage.
+Vi holdte fra morgenstunden af et stand-up møde (ba-dum-tss), hvor vi hver især valgte en story som vi ønskede at arbejde med.
+Det første time forløb, helt som planlagt, men så skete det. Vi havde valgt at bruge Entity framework code-first, og dette gav meget mere bøvl end forventet. Det var en sej kamp, som ikke blev overvundet i dag.
+Imens vi arbejedet på at løse konflikterne på EF, blev der arbejdet på model og repository klasserne, samt sat diverse ting op til systemet.
+<img src="http://KLIM8D.github.io/Tema-XP/images/IMG_00000035.jpg" title="stories" ></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Opstart på Tema-XP]]></title>
+    <link href="http://KLIM8D.github.io/Tema-XP/blog/2013/10/30/opstart-pa-tema-xp/"/>
+    <updated>2013-10-30T13:15:00+01:00</updated>
+    <id>http://KLIM8D.github.io/Tema-XP/blog/2013/10/30/opstart-pa-tema-xp</id>
+    <content type="html"><![CDATA[<p>Tidligt onsdag morgen blev vi præsenteret for vores case. UCNs kunstforening, ville have lavet et system til auktionering af kunstværker.
+Gunhild agerede hermed som repræsentant for kunstforeningen, og vi fik holdt det første kunde møde.
+Vi havde forberedt nogle overskrifter til nogle stories, og vi fik på mødet udbygget de forskellige stories, med &ldquo;I want to&rdquo; osv.
+Efter mødet brugte vi planning game til at fastlægge et antal story points per story og konverterede det til timer.
+Her efter holdte vi andet møde med kunden, hvor vi fik prioteret de forskellige stories.
+Til sidst udarbejede vi en burndown og fik hængt stories op på væggen.</p>
+]]></content>
+  </entry>
   
 </feed>
