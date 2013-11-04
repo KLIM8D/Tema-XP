@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Repository.Models
 {
-    class Auction
+    public class Auction
     {
+        public int Id { get; set; }
     }
 }

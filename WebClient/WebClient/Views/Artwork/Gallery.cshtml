@@ -1,0 +1,25 @@
+﻿@model List<Repository.Models.Artwork>
+
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Gallery</h2>
+
+
+@foreach (var a in Model)
+{
+    <div style="border: grey 2px solid; height: 205px; width: 800px">
+        <div style="float: left; position: relative; text-align: center; line-height: 120px; height: 180px; width: 170px; margin: 10px;">
+            <img style="width: 170px; border: red 2px solid; vertical-align: middle" src="@a.Id" />
+        </div>
+        <div style="">
+            <div style="padding: 10px">
+                <span style="font-size: 30px; padding-top: 20px">@a.Title</span>
+                <span style="">af @a.Artist.FirstName</span>
+            </div>
+            <span style="border: 1px grey solid">@a.Description</span>
+        </div>
+    </div>
+}

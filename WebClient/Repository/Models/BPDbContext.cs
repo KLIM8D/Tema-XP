@@ -20,6 +20,7 @@ namespace Repository.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Artwork> Artworks { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Auction> Auctions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -27,6 +28,7 @@ namespace Repository.Models
             modelBuilder.Configurations.Add(new CategoryMap());
             modelBuilder.Configurations.Add(new ArtworkMap());
             modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new AuctionMap());
 
             base.OnModelCreating(modelBuilder);
         }
