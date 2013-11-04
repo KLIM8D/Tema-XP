@@ -22,20 +22,26 @@ namespace Repository.Resources
             return db.Users.FirstOrDefault(x => x.Id == value);
         }
 
-        public void Insert(User user)
+        public User GetUserByEMail(string value)
+        {
+            return db.Users.FirstOrDefault(x => x.Email == value);
+        }
+
+        public void InsertUser(User user)
         {
             db.Users.Add(user);
             db.SaveChanges();
         }
 
-        public void Disable(int value)
+        public void DisableUser(User user)
         {
-            User rUser = GetUserById(value);
+            db.Users.Add(user).Active = false;
+            db.SaveChanges();
+        }
 
-            if (rUser == null)
-                return;
-
-            rUser.Active = false;
+        public void DeleteUser(User user)
+        {
+            db.Users.Remove(user);
             db.SaveChanges();
         }
     }
