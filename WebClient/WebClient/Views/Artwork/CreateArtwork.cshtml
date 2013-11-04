@@ -1,0 +1,76 @@
+﻿@model global::WebClient.Models.ArtworkViewModel
+
+@{
+    ViewBag.Title = "CreateArtwork";
+    //Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@using (Html.BeginForm("CreateArtwork"))
+{
+    <h2>Opret Kunstværk</h2>
+
+    <div>
+        <table>
+            <tr>
+                <td>Titel
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Title)
+                </td>
+            </tr>
+            <tr>
+                <td>Kunstner
+                </td>
+                <td>
+                    @Html.DropDownListFor(m => m.Artist.Id, Model.ArtistItems)
+                </td>
+            </tr>
+            <tr>
+                <td>Beskrivelse 
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Description)
+                </td>
+            </tr>
+            <tr>
+                <td>Kategori
+                </td>
+                <td>
+                    @Html.DropDownListFor(m => m.Category.Id, Model.CategoryItems)
+                </td>
+            </tr>
+            <tr>
+                <td>Købspris
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Price)
+                </td>
+            </tr>
+            <tr>
+                <td>Billede
+                </td>
+                <td>
+                    <input id="ImageFile" type="file" />
+                </td>
+            </tr>
+            <tr>
+                <td>Højde
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.SizeHeight)
+                </td>
+            </tr>
+            <tr>
+                <td>Bredte
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.SizeWidth)
+                </td>
+            </tr>
+        </table>
+
+        <input class="btn" type="submit" text="Submit" />
+    </div>   
+}
+
+

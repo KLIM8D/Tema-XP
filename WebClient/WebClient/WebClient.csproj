@@ -166,7 +166,9 @@
     </Compile>
     <Compile Include="Helpers\ExtensionMethods.cs" />
     <Compile Include="Models\ArtistViewModel.cs" />
+    <Compile Include="Models\ArtworkViewModel.cs" />
     <Compile Include="Models\AuctionViewModel.cs" />
+    <Compile Include="Models\CategoryViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +189,8 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\Artworks\KillerSnail.jpg" />
+    <Content Include="Images\Artworks\MiniGris.jpg" />
     <Content Include="Images\Artworks\MortenKS.jpg" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
@@ -229,6 +233,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Artwork\Gallery.cshtml" />
     <Content Include="Views\Auction\CreateAuction.cshtml" />
+    <Content Include="Views\Artwork\CreateArtwork.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filters\" />
