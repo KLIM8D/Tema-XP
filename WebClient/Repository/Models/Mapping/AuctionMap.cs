@@ -15,6 +15,10 @@ namespace Repository.Models.Mapping
 
             this.ToTable("Auctions");
             this.Property(t => t.Id).HasColumnName("Id");
+            this.Property(t => t.Expires).HasColumnName("Expires");
+            this.Property(t => t.MinPrice).HasColumnName("MinPrice");
+
+            this.HasRequired(t => t.Artwork);
         }         
     }
 }

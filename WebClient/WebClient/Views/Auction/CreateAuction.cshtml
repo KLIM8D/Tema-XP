@@ -16,14 +16,17 @@
         <tr>
             <td>Auktionen slutter</td>
             <td>@Html.TextBoxFor(t => t.Expires)</td>
+            <td>@Html.ValidationMessageFor(t => t.Expires)</td>
         </tr>
         <tr>
             <td>Minimums pris</td>
             <td>@Html.TextBoxFor(t => t.MinPrice)</td>
+            <td>@Html.ValidationMessageFor(t => t.MinPrice)</td>
         </tr>
         <tr>
             <td>Buds interval</td>
             <td>@Html.TextBoxFor(t => t.Interval)</td>
+            <td>@Html.ValidationMessageFor(t => t.Interval)</td>
         </tr>
     </table>
     <button type="submit">Godkend</button>

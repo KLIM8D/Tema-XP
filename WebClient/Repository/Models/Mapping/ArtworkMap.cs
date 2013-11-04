@@ -10,8 +10,6 @@ namespace Repository.Models.Mapping
 
             this.ToTable("Artworks");
             this.Property(t => t.Id).HasColumnName("Id");
-            this.Property(t => t.ArtistId).HasColumnName("ArtistId");
-            this.Property(t => t.CategoryId).HasColumnName("CategoryId");
             this.Property(t => t.Title).HasColumnName("Title");
             this.Property(t => t.Date).HasColumnName("Date");
             this.Property(t => t.Description).HasColumnName("Description");
@@ -21,8 +19,8 @@ namespace Repository.Models.Mapping
             this.Property(t => t.ImgFileName).HasColumnName("ImgFileName");
             this.Property(t => t.Active).HasColumnName("Active");
 
-            this.HasRequired(t => t.Artist).WithMany(t => t.Artworks).HasForeignKey(d => d.ArtistId);
-            this.HasRequired(t => t.Category).WithMany(t => t.Artworks).HasForeignKey(d => d.CategoryId);
+            this.HasRequired(t => t.Artist);
+            this.HasRequired(t => t.Category);
         }
     }
 }

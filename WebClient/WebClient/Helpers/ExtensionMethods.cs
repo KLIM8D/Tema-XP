@@ -30,14 +30,27 @@ namespace WebClient.Helpers
             var returnList = new List<CategoryViewModel>();
             categories.ForEach(x => returnList.Add(
                 new CategoryViewModel
-                    {
-                        Active = x.Active,
-                        Artworks = x.Artworks,
-                        Id = x.Id,
-                        Title = x.Title
-                    }
+                {
+                    Active = x.Active,
+                    Artworks = x.Artworks,
+                    Id = x.Id,
+                    Title = x.Title
+                }
                 ));
             return returnList;
+        }
+
+        public static Auction ConvertToBusinessModel(this AuctionViewModel model)
+        {
+            var auction = new Auction
+                          {
+                              Artwork = model.Artwork,
+                              Expires = model.Expires,
+                              Interval = model.Interval,
+                              MinPrice = model.MinPrice
+                          };
+
+            return auction;
         }
     }
 }

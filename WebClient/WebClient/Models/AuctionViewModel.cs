@@ -8,19 +8,19 @@ namespace WebClient.Models
 {
     public class AuctionViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Skal angives")]
+        [Range(1,99999, ErrorMessage = "Værdien skal være i mellem 1 og 99999")]
         [DataType(DataType.Currency)]
-        [Range(1,99999)]
         public decimal MinPrice { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Skal angives")]
         [DataType(DataType.Currency)]
-        [Range(1, 99999)]
+        [Range(1, 99999, ErrorMessage = "Værdien skal være i mellem 1 og 99999")]
         public decimal Interval { get; set; }
         public Artwork Artwork { get; set; }
         public Bid Bid { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Skal angives")]
         [DataType(DataType.DateTime)]
-        [Range(1, 99999)]
         public DateTime Expires { get; set; }
         public int ArtistId { get; set; }
         public virtual List<ArtistViewModel> Artists { get; set; }

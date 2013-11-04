@@ -21,6 +21,7 @@ namespace Repository.Models
         public DbSet<Artwork> Artworks { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Auction> Auctions { get; set; }
+        public DbSet<Bid> Bids { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -29,6 +30,7 @@ namespace Repository.Models
             modelBuilder.Configurations.Add(new ArtworkMap());
             modelBuilder.Configurations.Add(new UserMap());
             modelBuilder.Configurations.Add(new AuctionMap());
+            modelBuilder.Configurations.Add(new BidMap());
 
             base.OnModelCreating(modelBuilder);
         }

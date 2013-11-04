@@ -25,5 +25,11 @@ namespace Repository.Resources
         {
             return db.Auctions.FirstOrDefault(x => x.Id.Equals(id));
         }
+
+        public void Insert(Auction auction)
+        {
+            db.Auctions.Add(auction);
+            db.SaveChanges();
+        }
     }
 }

@@ -12,6 +12,8 @@ namespace Repository.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Title).HasColumnName("Title");
             this.Property(t => t.Active).HasColumnName("Active");
+
+            this.HasMany(t => t.Artworks);
         }
     }
 }

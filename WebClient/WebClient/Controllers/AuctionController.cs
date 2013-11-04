@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Repository.Models;
 using Repository.Resources;
 using WebClient.Models;
 using WebClient.Helpers;
@@ -25,6 +26,7 @@ namespace WebClient.Controllers
             //Artists = artists.ConvertToViewModel(
             var viewModel = new AuctionViewModel();
             viewModel.Artworks = new ArtworkRepository().GetAllArtworks().ToList();
+            viewModel.Expires = DateTime.Now;
             
             return View(viewModel);
         }
@@ -32,6 +34,13 @@ namespace WebClient.Controllers
         [HttpPost]
         public ActionResult CreateAuction(AuctionViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                var repo = new AuctionRepository();
+                Auction auction = model.ConvertToBusinessModel();
+                repo.Insert(auction);
+            }
+            model.Artworks = new ArtworkRepository().GetAllArtworks().ToList();
             return View(model);
         }
     }
