@@ -1,0 +1,30 @@
+﻿@model global::WebClient.Models.AuctionViewModel
+
+@{
+    ViewBag.Title = "CreateAuction";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>CreateAction</h2>
+
+@using (Html.BeginForm("CreateAuction"))
+{
+    <legend>Kunstværk</legend>
+    @Html.DropDownListFor(t => t.Artwork.Id, Model.ArtworkItems)
+    <legend>Auktion</legend>
+    <table border="0" cellpadding="5" cellspacing="2">
+        <tr>
+            <td>Auktionen slutter</td>
+            <td>@Html.TextBoxFor(t => t.Expires)</td>
+        </tr>
+        <tr>
+            <td>Minimums pris</td>
+            <td>@Html.TextBoxFor(t => t.MinPrice)</td>
+        </tr>
+        <tr>
+            <td>Buds interval</td>
+            <td>@Html.TextBoxFor(t => t.Interval)</td>
+        </tr>
+    </table>
+    <button type="submit">Godkend</button>
+}
