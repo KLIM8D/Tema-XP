@@ -22,20 +22,26 @@ namespace Repository.Resources
             return db.Artists.FirstOrDefault(x => x.Id == value);
         }
 
-        public void Insert(Artist artist)
+        public Artist GetArtistByFullName(string value)
+        {
+            return db.Artists.FirstOrDefault(x => x.FirstName + " " + x.SurName == value);
+        }
+
+        public void InsertArtist(Artist artist)
         {
             db.Artists.Add(artist);
             db.SaveChanges();
         }
 
-        public void Disable(int value)
+        public void DisableArtist(Artist artist)
         {
-            Artist rArtist = GetArtistById(value);
+            db.Artists.Add(artist).Active = false;
+            db.SaveChanges();
+        }
 
-            if (rArtist == null)
-                return;
-
-            rArtist.Active = false;
+        public void DeleteArtist(Artist artist)
+        {
+            db.Artists.Remove(artist);
             db.SaveChanges();
         }
     }

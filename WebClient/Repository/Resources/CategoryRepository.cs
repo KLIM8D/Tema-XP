@@ -22,19 +22,26 @@ namespace Repository.Resources
             return db.Categories.FirstOrDefault(x => x.Id == value);
         }
 
-        public void Insert(Category category)
+        public Category GetCategoryByTitle(string value)
         {
-            db.Categories.Add(category);
+            return db.Categories.FirstOrDefault(x => x.Title == value);
         }
 
-        public void Disable(int value)
+        public void InsertCategory(Category category)
         {
-            Category rCategory = GetCategoryById(value);
+            db.Categories.Add(category);
+            db.SaveChanges();
+        }
 
-            if (rCategory == null)
-                return;
+        public void DisableCategory(Category category)
+        {
+            db.Categories.Add(category).Active = false;
+            db.SaveChanges();
+        }
 
-            rCategory.Active = false;
+        public void DeleteCategory(Category category)
+        {
+            db.Categories.Remove(category);
             db.SaveChanges();
         }
     }

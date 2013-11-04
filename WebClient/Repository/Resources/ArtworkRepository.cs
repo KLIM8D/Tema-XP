@@ -22,20 +22,21 @@ namespace Repository.Resources
             return db.Artworks.FirstOrDefault(x => x.Id == value);
         }
 
-        public void Insert(Artwork artwork)
+        public void InsertArtwork(Artwork artwork)
         {
             db.Artworks.Add(artwork);
             db.SaveChanges();
         }
 
-        public void Disable(int value)
+        public void DisableArtwork(Artwork artwork)
         {
-            Artwork rArtwork = GetArtworkById(value);
+            db.Artworks.Add(artwork).Active = false;
+            db.SaveChanges();
+        }
 
-            if (rArtwork == null)
-                return;
-
-            rArtwork.Active = false;
+        public void DeleteArtwork(Artwork artwork)
+        {
+            db.Artworks.Remove(artwork);
             db.SaveChanges();
         }
     }

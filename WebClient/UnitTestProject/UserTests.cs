@@ -77,7 +77,7 @@ namespace UnitTestProject
         [TestMethod]
         [Priority(4)]
         [TestCategory("Repository, Users")]
-        public void RemoveUser()
+        public void DeleteUser()
         {
             _userRepository.DeleteUser(_userRepository.GetUserByEMail("unit@testing.io"));
         }
