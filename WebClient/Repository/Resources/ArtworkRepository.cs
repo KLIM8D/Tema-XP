@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Repository.Models;
 
 namespace Repository.Resources
@@ -12,9 +13,9 @@ namespace Repository.Resources
             db = new BPDbContext();
         }
 
-        public IQueryable<Artwork> GetAllArtworks()
+        public List<Artwork> GetAllArtworks()
         {
-            return db.Artworks;
+            return db.Artworks.Include("Artist").Include("Category").ToList();
         }
 
         public Artwork GetArtworkById(int value)

@@ -14,6 +14,7 @@ namespace Repository.Models
         public BPDbContext()
         {
             Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = true;
         }
 
         public DbSet<Artist> Artists { get; set; }
