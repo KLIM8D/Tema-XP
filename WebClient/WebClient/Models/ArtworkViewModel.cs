@@ -8,18 +8,21 @@ namespace WebClient.Models
 {
     public class ArtworkViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Skal udfyldes")]
         public string Title { get; set; }
         [Required]
         public string Description { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Skal udfyldes")]
         [DataType(DataType.Currency)]
         [Range(1, 99999)]
         public decimal Price { get; set; }
 
         public decimal SizeHeight { get; set; }
+
         public decimal SizeWidth { get; set; }
+        
         public Artist Artist { get; set; }
+        
         public Category Category { get; set; }
 
         public virtual List<ArtistViewModel> Artists { get; set; }

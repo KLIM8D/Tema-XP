@@ -10,16 +10,16 @@
 
 @foreach (var a in Model)
 {
-    <div style="border: grey 2px solid; height: 205px; width: 800px">
+    <div style="border: black 2px solid; height: 205px; width: 800px">
         <div style="float: left; position: relative; text-align: center; line-height: 120px; height: 180px; width: 170px; margin: 10px;">
-            <img style="width: 170px; border: red 2px solid; vertical-align: middle" src="/Images/Artworks/@a.ImgFileName" />
+            <img style="height: 180px; border: black 2px solid; vertical-align: middle" src="/Images/Artworks/@a.ImgFileName" />
         </div>
         <div style="">
             <div style="padding: 10px">
                 <span style="font-size: 30px; padding-top: 20px">@a.Title</span>
                 <span style="">af @a.Artist.FirstName</span>
             </div>
-            <span style="border: 1px grey solid">@a.Description</span>
+            <span style="border: 1px solid">@a.Description</span>
         </div>
     </div>
 }

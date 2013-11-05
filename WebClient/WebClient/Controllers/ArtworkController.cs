@@ -38,6 +38,13 @@ namespace WebClient.Controllers
         [HttpPost]
         public ActionResult CreateArtwork(ArtworkViewModel model)
         {
+            if (ModelState.IsValid)
+            {
+                var repo = new ArtworkRepository();
+                Artwork artwork = model.ConvertToBusinessModel();
+                repo.InsertArtwork(artwork);
+            }
+            model.Artists = new ArtistRepository().GetAllArtist().ToList().ConvertToViewModel();
             return View(model);
         }
     }

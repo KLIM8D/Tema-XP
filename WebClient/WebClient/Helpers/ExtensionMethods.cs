@@ -52,5 +52,21 @@ namespace WebClient.Helpers
 
             return auction;
         }
+
+        public static Artwork ConvertToBusinessModel(this ArtworkViewModel model)
+        {
+            var artwork = new Artwork
+                              {
+                                  Artist = model.Artist,
+                                  Category = model.Category,
+                                  Description = model.Description,
+                                  ImgFileName = "",
+                                  Price = model.Price,
+                                  SizeHeight = model.SizeHeight,
+                                  SizeWidth = model.SizeWidth,
+                                  Title = model.Title
+                              };
+            return artwork;
+        }
     }
 }
