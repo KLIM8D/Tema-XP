@@ -63,13 +63,13 @@ namespace UnitTestProject
             Assert.IsNotNull(_artistRepository.GetArtistByFullName("Unit Test"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(3)]
         [TestCategory("Repository, Artist")]
         public void DisableArtist()
         {
             _artistRepository.DisableArtist(_artistRepository.GetArtistByFullName("Unit Test"));
-        }
+        }*/
 
         /*[TestMethod]
         [Priority(4)]

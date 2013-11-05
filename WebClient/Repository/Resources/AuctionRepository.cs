@@ -22,9 +22,9 @@ namespace Repository.Resources
             return db.Auctions;
         }
 
-        public Auction GetAuctionById(int id)
+        public Auction GetAuctionById(int value)
         {
-            return db.Auctions.Include("Artwork").Include("Artist").FirstOrDefault(x => x.Id.Equals(id));
+            return db.Auctions.Include(x => x.Artwork.Artist).FirstOrDefault(x => x.Id.Equals(value));
         }
 
         public Bid GetHighestBid(int auctionId)

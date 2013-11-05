@@ -66,13 +66,13 @@ namespace UnitTestProject
             Assert.IsNotNull(_userRepository.GetUserByEMail("unit@testing.io"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(3)]
         [TestCategory("Repository, Users")]
         public void DisableUser()
         {
             _userRepository.DisableUser(_userRepository.GetUserByEMail("unit@testing.io"));
-        }
+        }*/
 
         /*[TestMethod]
         [Priority(4)]

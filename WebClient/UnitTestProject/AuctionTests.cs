@@ -55,21 +55,21 @@ namespace UnitTestProject
             Assert.IsNotNull(_auctionRepository.GetAllAuctions().ToList());
         }
 
-        //[TestMethod]
-        //[Priority(2)]
-        //[TestCategory("Repository, Auction")]
-        //public void GetAuctionById()
-        //{
-        //    Assert.IsNotNull(_auctionRepository.GetAuctionById(1));
-        //}
+        [TestMethod]
+        [Priority(2)]
+        [TestCategory("Repository, Auction")]
+        public void GetAuctionById()
+        {
+            Assert.IsNotNull(_auctionRepository.GetAuctionById(1));
+        }
 
-        //[TestMethod]
-        //[Priority(3)]
-        //[TestCategory("Repository, Auction")]
-        //public void DisableAuction()
-        //{
-        //    _auctionRepository.DisableAuction(_auctionRepository.GetAuctionById(1));
-        //}
+        /*[TestMethod]
+        [Priority(3)]
+        [TestCategory("Repository, Auction")]
+        public void DisableAuction()
+        {
+            _auctionRepository.DisableAuction(_auctionRepository.GetAuctionById(1));
+        }*/
 
         /*[TestMethod]
         [Priority(4)]

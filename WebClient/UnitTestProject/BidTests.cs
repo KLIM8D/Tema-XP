@@ -78,13 +78,13 @@ namespace UnitTestProject
             Assert.IsNotNull(_bidRepository.GetBidById(1));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(3)]
         [TestCategory("Repository, Bid")]
         public void DisableBid()
         {
             _bidRepository.DisableBid(_bidRepository.GetBidById(1));
-        }
+        }*/
 
         /*[TestMethod]
         [Priority(4)]

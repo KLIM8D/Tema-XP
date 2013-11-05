@@ -62,13 +62,13 @@ namespace UnitTestProject
             Assert.IsNotNull(_categoryRepository.GetCategoryByTitle("Unit Test"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(3)]
         [TestCategory("Repository, Category")]
         public void DisableCategory()
         {
             _categoryRepository.DisableCategory(_categoryRepository.GetCategoryByTitle("Unit Test"));
-        }
+        }*/
 
         /*[TestMethod]
         [Priority(4)]

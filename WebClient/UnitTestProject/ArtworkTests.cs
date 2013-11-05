@@ -73,13 +73,13 @@ namespace UnitTestProject
             Assert.IsNotNull(_artworkRepository.GetArtworkByTitle("Unit Testing"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(3)]
         [TestCategory("Repository, Artwork")]
         public void DisableArtwork()
         {
             _artworkRepository.DisableArtwork(_artworkRepository.GetArtworkByTitle("Unit Testing"));
-        }
+        }*/
 
         /*[TestMethod]
         [Priority(4)]
