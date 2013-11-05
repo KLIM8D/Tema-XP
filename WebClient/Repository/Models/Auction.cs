@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository.Models
 {
@@ -14,5 +11,6 @@ namespace Repository.Models
         public virtual Artwork Artwork { get; set; }
         public virtual List<Bid> Bids { get; set; }
         public DateTime Expires { get; set; }
+        public bool Active { get; set; }
     }
 }

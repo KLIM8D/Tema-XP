@@ -63,6 +63,7 @@
     <Compile Include="Resources\ArtistRepository.cs" />
     <Compile Include="Resources\ArtworkRepository.cs" />
     <Compile Include="Resources\AuctionRepository.cs" />
+    <Compile Include="Resources\BidRepository.cs" />
     <Compile Include="Resources\CategoryRepository.cs" />
     <Compile Include="Resources\UserRepository.cs" />
   </ItemGroup>

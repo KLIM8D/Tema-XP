@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Repository.Models;
 
 namespace Repository.Resources
@@ -26,9 +23,22 @@ namespace Repository.Resources
             return db.Auctions.FirstOrDefault(x => x.Id.Equals(id));
         }
 
-        public void Insert(Auction auction)
+        public void InsertAuction(Auction auction)
         {
+            db.Entry(auction.Artwork).State = EntityState.Unchanged;
             db.Auctions.Add(auction);
+            db.SaveChanges();
+        }
+
+        public void DisableAuction(Auction auction)
+        {
+            db.Auctions.Add(auction).Active = false;
+            db.SaveChanges();
+        }
+
+        public void DeleteAuction(Auction auction)
+        {
+            db.Auctions.Remove(auction);
             db.SaveChanges();
         }
     }

@@ -71,12 +71,12 @@ namespace UnitTestProject
             _artistRepository.DisableArtist(_artistRepository.GetArtistByFullName("Unit Test"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(4)]
         [TestCategory("Repository, Artist")]
         public void DeleteArtist()
         {
             _artistRepository.DeleteArtist(_artistRepository.GetArtistByFullName("Unit Test"));
-        }
+        }*/
     }
 }

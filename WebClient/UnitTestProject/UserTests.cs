@@ -74,12 +74,12 @@ namespace UnitTestProject
             _userRepository.DisableUser(_userRepository.GetUserByEMail("unit@testing.io"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(4)]
         [TestCategory("Repository, Users")]
         public void DeleteUser()
         {
             _userRepository.DeleteUser(_userRepository.GetUserByEMail("unit@testing.io"));
-        }
+        }*/
     }
 }

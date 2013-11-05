@@ -70,12 +70,12 @@ namespace UnitTestProject
             _categoryRepository.DisableCategory(_categoryRepository.GetCategoryByTitle("Unit Test"));
         }
 
-        [TestMethod]
+        /*[TestMethod]
         [Priority(4)]
         [TestCategory("Repository, Category")]
         public void DeleteCategory()
         {
             _categoryRepository.DeleteCategory(_categoryRepository.GetCategoryByTitle("Unit Test"));
-        }
+        }*/
     }
 }
