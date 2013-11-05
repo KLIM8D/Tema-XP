@@ -4,7 +4,7 @@
   <title><![CDATA[Tema-XP]]></title>
   <link href="http://KLIM8D.github.io/Tema-XP/atom.xml" rel="self"/>
   <link href="http://KLIM8D.github.io/Tema-XP/"/>
-  <updated>2013-11-05T11:49:06+01:00</updated>
+  <updated>2013-11-05T11:54:05+01:00</updated>
   <id>http://KLIM8D.github.io/Tema-XP/</id>
   <author>
     <name><![CDATA[Mads, Chris & Morten]]></name>
@@ -15,13 +15,16 @@
   
   <entry>
     <title type="html"><![CDATA[Mandag...........]]></title>
-    <link href="http://KLIM8D.github.io/Tema-XP/blog/2013/11/05/mandag-dot-dot-dot/"/>
-    <updated>2013-11-05T11:37:00+01:00</updated>
-    <id>http://KLIM8D.github.io/Tema-XP/blog/2013/11/05/mandag-dot-dot-dot</id>
+    <link href="http://KLIM8D.github.io/Tema-XP/blog/2013/11/04/mandag-dot-dot-dot/"/>
+    <updated>2013-11-04T11:37:00+01:00</updated>
+    <id>http://KLIM8D.github.io/Tema-XP/blog/2013/11/04/mandag-dot-dot-dot</id>
     <content type="html"><![CDATA[<p>Efter gårsdagens gennembrud fortsætter vi vores arbejde på projektet. Vi er så småt ved at vende os til tanken omkring pair-programming, selvom vi er enige om at det er ineffektivt hvis man konsekvent bruger det.
 Selvom vi nu alle arbejder på de højest prioriterede storries, lider vi under første dagens tekniske problemer. Derfor holdt vi et møde med kunden(gunhild) omkring en justering af vores releaseplan.
 Efter at vi flytttede de overskudende storries over til release 2, ser det nu ud til at vi har en passende arbejdsmængde, at fuldføre på tirsdag. Det er rart at se systemet, som så småt tager form. Man begynder at kunne se de mange forskellige tråde begynder at passe sammen.
 Det er en god følelse. Vi er alle optimistiske omkring det endelige produkt. :)</p>
+
+<p><img src="http://KLIM8D.github.io/Tema-XP/images/IMG_00000043.jpg" title="Todo-mm" >
+<img src="http://KLIM8D.github.io/Tema-XP/images/IMG_00000044.jpg" title="Burndown-mandag" ></p>
 ]]></content>
   </entry>
   
