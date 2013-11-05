@@ -32,10 +32,22 @@ namespace Repository.Resources
             return db.Bids.Where(x => x.Auction.Id.Equals(auctionId)).OrderByDescending(x => x.Price).FirstOrDefault();
         }
 
-        public void Insert(Auction auction)
+        public void InsertAuction(Auction auction)
         {
-            db.Auctions.Add(auction);
             db.Entry(auction.Artwork).State = EntityState.Unchanged;
+            db.Auctions.Add(auction);
+            db.SaveChanges();
+        }
+
+        public void DisableAuction(Auction auction)
+        {
+            db.Auctions.Add(auction).Active = false;
+            db.SaveChanges();
+        }
+
+        public void DeleteAuction(Auction auction)
+        {
+            db.Auctions.Remove(auction);
             db.SaveChanges();
         }
     }

@@ -20,7 +20,12 @@ namespace Repository.Resources
 
         public Artwork GetArtworkById(int value)
         {
-            return db.Artworks.FirstOrDefault(x => x.Id == value);
+            return db.Artworks.Include("Artist").Include("Category").FirstOrDefault(x => x.Id == value);
+        }
+
+        public Artwork GetArtworkByTitle(string value)
+        {
+            return db.Artworks.Include("Artist").Include("Category").FirstOrDefault(x => x.Title == value);
         }
 
         public void InsertArtwork(Artwork artwork)

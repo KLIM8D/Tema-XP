@@ -17,6 +17,7 @@ namespace Repository.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Price).HasColumnName("Price");
             this.Property(t => t.Date).HasColumnName("Date");
+            this.Property(t => t.Active).HasColumnName("Active");
 
             this.HasRequired(t => t.User);
             this.HasRequired(t => t.Auction);

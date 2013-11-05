@@ -38,7 +38,7 @@ namespace WebClient.Controllers
             {
                 var repo = new AuctionRepository();
                 Auction auction = model.ConvertToBusinessModel();
-                repo.Insert(auction);
+                repo.InsertAuction(auction);
             }
             model.Artworks = new ArtworkRepository().GetAllArtworks().ToList();
             return View(model);

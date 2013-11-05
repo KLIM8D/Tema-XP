@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity.ModelConfiguration;
 
 namespace Repository.Models.Mapping
 {
@@ -17,6 +12,7 @@ namespace Repository.Models.Mapping
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Expires).HasColumnName("Expires");
             this.Property(t => t.MinPrice).HasColumnName("MinPrice");
+            this.Property(t => t.Active).HasColumnName("Active");
 
             this.HasRequired(t => t.Artwork);
         }         
