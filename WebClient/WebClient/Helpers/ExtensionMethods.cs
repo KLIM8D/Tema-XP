@@ -56,17 +56,31 @@ namespace WebClient.Helpers
         public static Artwork ConvertToBusinessModel(this ArtworkViewModel model)
         {
             var artwork = new Artwork
-                              {
-                                  Artist = model.Artist,
-                                  Category = model.Category,
-                                  Description = model.Description,
-                                  ImgFileName = "",
-                                  Price = model.Price,
-                                  SizeHeight = model.SizeHeight,
-                                  SizeWidth = model.SizeWidth,
-                                  Title = model.Title
-                              };
+                          {
+                              Artist = model.Artist,
+                              Category = model.Category,
+                              Description = model.Description,
+                              ImgFileName = "",
+                              Price = model.Price,
+                              SizeHeight = model.SizeHeight,
+                              SizeWidth = model.SizeWidth,
+                              Title = model.Title
+                          };
             return artwork;
+        }
+
+        public static AuctionViewModel ConvertToViewModel(this Auction auction)
+        {
+            var model = new AuctionViewModel
+                        {
+                            Artwork = auction.Artwork,
+                            ArtistId = auction.Artwork.Artist.Id,
+                            Interval = auction.Interval,
+                            MinPrice = auction.MinPrice,
+                            Expires = auction.Expires
+                        };
+
+            return model;
         }
     }
 }

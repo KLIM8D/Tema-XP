@@ -19,6 +19,7 @@ namespace WebClient.Models
         public decimal Interval { get; set; }
         public Artwork Artwork { get; set; }
         public Bid Bid { get; set; }
+        public Bid NextBid { get; set; }
         [Required(ErrorMessage = "Skal angives")]
         [DataType(DataType.DateTime)]
         public DateTime Expires { get; set; }

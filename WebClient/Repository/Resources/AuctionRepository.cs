@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,12 +24,18 @@ namespace Repository.Resources
 
         public Auction GetAuctionById(int id)
         {
-            return db.Auctions.FirstOrDefault(x => x.Id.Equals(id));
+            return db.Auctions.Include("Artwork").Include("Artist").FirstOrDefault(x => x.Id.Equals(id));
+        }
+
+        public Bid GetHighestBid(int auctionId)
+        {
+            return db.Bids.Where(x => x.Auction.Id.Equals(auctionId)).OrderByDescending(x => x.Price).FirstOrDefault();
         }
 
         public void Insert(Auction auction)
         {
             db.Auctions.Add(auction);
+            db.Entry(auction.Artwork).State = EntityState.Unchanged;
             db.SaveChanges();
         }
     }

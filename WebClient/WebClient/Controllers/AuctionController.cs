@@ -43,5 +43,19 @@ namespace WebClient.Controllers
             model.Artworks = new ArtworkRepository().GetAllArtworks().ToList();
             return View(model);
         }
+
+        public ActionResult ViewAuctionDetails(int id)
+        {
+            var repo = new AuctionRepository();
+            var model = repo.GetAuctionById(id).ConvertToViewModel();
+            model.Bid = repo.GetHighestBid(model.ArtistId);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult ViewAuctionDetails(AuctionViewModel model)
+        {
+            return View(model);
+        }
     }
 }

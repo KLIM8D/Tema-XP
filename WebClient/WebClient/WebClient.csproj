@@ -236,6 +236,7 @@
     <Content Include="Views\Artwork\Gallery.cshtml" />
     <Content Include="Views\Auction\CreateAuction.cshtml" />
     <Content Include="Views\Artwork\CreateArtwork.cshtml" />
+    <Content Include="Views\Auction\ViewAuctionDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Filters\" />
