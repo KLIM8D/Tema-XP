@@ -23,8 +23,9 @@ namespace WebClient.Controllers
 
         public ActionResult Gallery()
         {
-            List<Artwork> a = new List<Artwork>();
-            return View(a);
+            List<Artwork> artworks = new List<Artwork>();
+            artworks = new ArtworkRepository().GetAllArtworks().ToList();
+            return View(artworks);
         }
 
         public ActionResult CreateArtwork()
