@@ -26,14 +26,12 @@ namespace Repository.Resources
 
         public IQueryable<Bid> GetAllBidsByAuction(Auction auction)
         {
-            //return db.Bids.Include("User").Include("Auction").Where(x => x.Auction == auction);
             return db.Bids.Include(x => x.User).Include(x => x.Auction).Where(x => x.Auction.Id == auction.Id);
         }
 
         public IQueryable<Bid> GetAllBidsByUser(User user)
         {
-            //return db.Bids.Include("User").Include("Auction").Where(x => x.User == user);
-            return db.Bids.Include(x => x.User).Where(x => x.User == user);
+            return db.Bids.Include(x => x.User).Where(x => x.User.Id == user.Id);
         }
 
         public void InsertBid(Bid bid)

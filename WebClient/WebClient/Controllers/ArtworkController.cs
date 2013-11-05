@@ -31,6 +31,7 @@ namespace WebClient.Controllers
         {
             var viewModel = new ArtworkViewModel();
             viewModel.Artists = new ArtistRepository().GetAllArtist().ToList().ConvertToViewModel();
+            viewModel.Categories = new CategoryRepository().GetAllCategories().ToList().ConvertToViewModel();
 
             return View(viewModel);
         }
@@ -42,9 +43,13 @@ namespace WebClient.Controllers
             {
                 var repo = new ArtworkRepository();
                 Artwork artwork = model.ConvertToBusinessModel();
+                artwork.Active = true;
+                artwork.Date = DateTime.Now;
                 repo.InsertArtwork(artwork);
             }
             model.Artists = new ArtistRepository().GetAllArtist().ToList().ConvertToViewModel();
+            model.Categories = new CategoryRepository().GetAllCategories().ToList().ConvertToViewModel();
+
             return View(model);
         }
     }

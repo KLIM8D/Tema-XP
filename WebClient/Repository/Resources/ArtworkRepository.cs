@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Repository.Models;
 
@@ -30,6 +31,8 @@ namespace Repository.Resources
 
         public void InsertArtwork(Artwork artwork)
         {
+            db.Entry(artwork.Artist).State = EntityState.Unchanged;
+            db.Entry(artwork.Category).State = EntityState.Unchanged;
             db.Artworks.Add(artwork);
             db.SaveChanges();
         }

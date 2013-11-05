@@ -8,6 +8,8 @@ namespace WebClient.Models
 {
     public class AuctionViewModel
     {
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "Skal angives")]
         [Range(1,99999, ErrorMessage = "Værdien skal være i mellem 1 og 99999")]
         [DataType(DataType.Currency)]
@@ -19,6 +21,7 @@ namespace WebClient.Models
         public decimal Interval { get; set; }
         public Artwork Artwork { get; set; }
         public Bid Bid { get; set; }
+
         public Bid NextBid { get; set; }
         [Required(ErrorMessage = "Skal angives")]
         [DataType(DataType.DateTime)]
@@ -34,5 +37,7 @@ namespace WebClient.Models
         {
             get { return new SelectList(Artworks, "Id", "Title"); }
         }
+
+        public string ErrorMessage { get; set; }
     }
 }

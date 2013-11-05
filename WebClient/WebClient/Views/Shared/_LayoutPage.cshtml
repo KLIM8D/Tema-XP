@@ -30,14 +30,11 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <a class="brand" href="/">Tema XP</a>
-                    @Html.ActionLink("Galleri", "Gallery", "Artwork")
-                    @Html.ActionLink("Opret kunstværk", "CreateArtwork", "Artwork")
+                    <span style="margin-left: 10px;">@Html.ActionLink("Galleri", "Gallery", "Artwork")</span>
+                    <span style="margin-left: 10px;">@Html.ActionLink("Opret kunstværk", "CreateArtwork", "Artwork")</span>
+                    <span style="margin-left: 10px;">@Html.ActionLink("Opret auktion", "CreateAuction", "Auction")</span>
+                    <span style="margin-left: 10px;">@Html.ActionLink("Vis auktion", "ViewAuctionDetails", "Auction", new { id = 1 }, null)</span>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
                             <li><a href="/">Home</a></li>

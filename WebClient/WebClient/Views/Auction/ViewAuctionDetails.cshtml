@@ -1,27 +1,71 @@
-﻿@model global::WebClient.Models.AuctionViewModel
+﻿@using System.Globalization
+@model global::WebClient.Models.AuctionViewModel
 
 @{
     ViewBag.Title = "ViewAuctionDetails";
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-<h2>@Html.LabelFor(x => x.Artwork.Title)</h2>
+<h2>@Model.Artwork.Title</h2>
 <div style="float: left; position: relative; text-align: center; line-height: 120px; height: 180px; width: 170px; margin: 10px;">
     <img style="width: 170px; border: red 2px solid; vertical-align: middle" src="/Images/Artworks/@Model.Artwork.ImgFileName" />
 </div>
-@Html.LabelFor(x => x.Artwork.Description)
-<table>
-    <tr>
-        <td>Højeste nuværende bud</td>
-        <td>@Html.LabelFor(x => x.Bid.Price)</td>
-    </tr>
-</table>
+@Model.Artwork.Description
+<div>Brede: @Model.Artwork.SizeWidth cm</div>
+<div>Højde: @Model.Artwork.SizeHeight cm</div>
+<div>Højeste nuværende bud: @Model.Bid.Price</div>
+<div>Udløber om: <b id="countdown"></b></div>
 @using (Html.BeginForm("PlaceBid"))
 {
+    @Html.HiddenFor(x => x.Id)
     <table>
         <tr>
             <td>@Html.TextBoxFor(x => x.NextBid.Price)</td>
-            <td><button type="submit">Byd</button></td>
+            <td>
+                <button type="submit">Byd</button></td>
         </tr>
     </table>
 }
+
+@if (!String.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <span>@Model.ErrorMessage</span>
+}
+
+<script>
+
+    CountDownTimer('@Model.Expires.ToString("MM/dd/yyyy HH:mm:ss", new CultureInfo("en-US"))', 'countdown');
+
+    function CountDownTimer(dt, id) {
+        var end = new Date(dt);
+
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
+
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
+
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+            document.getElementById(id).innerHTML = days + 'dag(e) ';
+            document.getElementById(id).innerHTML += hours + 'time(r) ';
+            document.getElementById(id).innerHTML += minutes + 'min ';
+            document.getElementById(id).innerHTML += seconds + 'sek';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+
+</script>
